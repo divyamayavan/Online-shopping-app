@@ -1,0 +1,545 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url("images/homedisplay.avif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo img {
+    height: 100px;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+nav a:hover {
+    color: darkred;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.product-section {
+    margin-top: 50px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.product-list div {
+    text-align: center;
+    cursor: pointer;
+}
+
+.product-list img {
+    width: 100px;
+    height: 100px;
+}
+
+footer {
+    margin-top: 300px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    position: relative;
+}
+
+#popup-image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.main-nav {
+    margin-bottom: 10px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    color: white;
+}
+
+.main-nav a:hover {
+    color: darkred;
+}
+
+.category-nav {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.category-nav ul li {
+    display: inline;
+}
+
+.category-nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+.category-nav ul li a:hover {
+    color: darkred;
+}
+
+.nav1 {
+    margin-left: 500px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-item {
+    width: 250px;
+    padding: 15px;
+    margin: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #fff;
+}
+
+.product-item img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.product-name {
+    font-size: 1.2em;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.product-price {
+    color: #2ecc71;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.quantity-input {
+    width: 50px;
+    margin-bottom: 15px;
+}
+
+.add-to-cart,
+.buy-now {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.add-to-cart {
+    background-color: #3498db;
+}
+
+.buy-now {
+    background-color: #e74c3c;
+}
+
+.add-to-cart:hover {
+    background-color: #2980b9;
+}
+
+.buy-now:hover {
+    background-color: #c0392b;
+}
+
+.main-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    display: block;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content li {
+    list-style: none;
+}
+
+.dropdown-content li a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content li a:hover {
+    background-color: #ddd;
+}
+
+.cart-content {
+    display: none;
+    padding: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.cart-item img {
+    width: 100px;
+    height: 100px;
+}
+
+.cart-item p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.remove-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.remove-btn:hover {
+    background-color: #c0392b;
+}
+
+.stars {
+    display: inline-block;
+}
+
+.star {
+    font-size: 24px;
+    cursor: pointer;
+    color: gray;
+}
+
+.star.filled {
+    color: green;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 320px; 
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 320px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* .popup {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+} */
+
+/* .popup-content {
+    width: 350px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+} */
+
+/* .close-btn {
+    float: right;
+    cursor: pointer;
+    font-size: 20px;
+} */
+
+.message-icon{
+    float:right;
+    margin-top: 250px;
+    background-color: lightskyblue;
+    padding: 15px;
+    border-radius: 20px;
+    color: white;
+}
+
+.typing-animation{
+    margin-left: 20px;
+    font-size: 16px;
+    color: white;
+    animation: fadeInOut 2s infinite;
+}
+@keyframes fadeInOut {
+    0%, 100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+/* Popup container */
+.message-popup {
+    width: 300px;
+    display: none; 
+    position: fixed;
+    top: 50%;
+    left: 85%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Popup content (header area) */
+  .popup-content-message {
+    /* width: 310px; */
+    height: 100px;
+    background-image: url("https://img.freepik.com/free-vector/blue-abstract-background_698452-2785.jpg");
+    color: white;
+    text-align: center;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .message-box-body {
+    background-color: white;
+    padding: 20px;
+    height: 200px;
+    overflow-y: auto;
+    color: #333;
+  }
+  
+  .message-box-footer {
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .message-input {
+    width: 80%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .send-btn {
+    width: 15%;
+    padding: 8px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .send-btn:hover {
+    background-color: darkblue;
+  }
+  
+.material-icons{
+    color: rgba(0, 0, 255, 0.67);
+}
+
+.message-box-body {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .message {
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .received {
+    align-self: flex-start;
+    background-color: #f0f0f0;
+    font-size: 5%;
+  }
+  
+  .sent {
+    align-self: flex-end;
+    background-color: #007bff;
+    color: white;
+  }
+
+  /* Style for the popup header */
+.popup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    color: white;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  /* Left side: logo and welcome text */
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    width: 30px; /* Set desired logo size */
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  .welcome-text {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  /* Right side: options icon and close button */
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .options-icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .close-btn {
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between logo image and text */
+  }
+  
+  .welcome-text {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333; 
+  }
+
+
+
